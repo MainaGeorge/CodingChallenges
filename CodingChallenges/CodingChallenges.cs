@@ -23,5 +23,11 @@ namespace CodingChallenges
         {
             return a == 30 || b == 30 || (a + b) == 30;
         }
+
+        //Write a C# Sharp program to check a given integer and return true if it is within 10 of 100 or 200
+        public static bool IsWithin10Of100Or200(int n)
+        {
+            return (n >= 90 && n <= 110) || (n >= 190 && n <= 210);
+        }
     }
 }

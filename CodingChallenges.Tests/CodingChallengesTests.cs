@@ -29,5 +29,15 @@ namespace CodingChallenges.Tests
         {
             Assert.Equal(expected, CodingChallenges.Is30OrSumsTo30(a, b));
         }
+
+        [Theory]
+        //[InlineData(103, true)]
+        //[InlineData(93, true)]
+        //[InlineData(90, true)]
+        [InlineData(89, false)]
+        public void IsWithin10Of100Or200(int n, bool expected)
+        {
+            Assert.Equal(expected, CodingChallenges.IsWithin10Of100Or200(n));
+        }
     }
 }
