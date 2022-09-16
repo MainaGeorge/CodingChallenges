@@ -29,5 +29,15 @@ namespace CodingChallenges
         {
             return (n >= 90 && n <= 110) || (n >= 190 && n <= 210);
         }
+
+        //Write a C# Sharp program to remove the character in a given position of a given string.
+        //The given position will be in the range 0.. string length -1 inclusive
+        public static string RemoveAtIndex(string input, int index)
+        {
+            if (index == input.Length)
+                return input[0..^2];
+
+            return input[0..index] + input[(index + 1)..];
+        }
     }
 }

@@ -39,5 +39,15 @@ namespace CodingChallenges.Tests
         {
             Assert.Equal(expected, CodingChallenges.IsWithin10Of100Or200(n));
         }
+
+        [Theory]
+        [InlineData("Pthon", "Python", 1)]
+        [InlineData("ython", "Python", 0)]
+        [InlineData("Pythn", "Python", 4)]
+        [InlineData("Pytho", "Python", 5)]
+        public void RemoveAtIndex(string expected, string input, int index)
+        {
+            Assert.Equal(expected, CodingChallenges.RemoveAtIndex(input, index));
+        }
     }
 }
