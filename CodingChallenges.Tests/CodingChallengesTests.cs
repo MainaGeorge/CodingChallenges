@@ -31,9 +31,9 @@ namespace CodingChallenges.Tests
         }
 
         [Theory]
-        //[InlineData(103, true)]
-        //[InlineData(93, true)]
-        //[InlineData(90, true)]
+        [InlineData(103, true)]
+        [InlineData(93, true)]
+        [InlineData(90, true)]
         [InlineData(89, false)]
         public void IsWithin10Of100Or200(int n, bool expected)
         {
@@ -48,6 +48,16 @@ namespace CodingChallenges.Tests
         public void RemoveAtIndex(string expected, string input, int index)
         {
             Assert.Equal(expected, CodingChallenges.RemoveAtIndex(input, index));
+        }
+
+        [Theory]
+        [InlineData(false, 1)]
+        [InlineData(false, -1)]
+        [InlineData(true, 14)]
+        [InlineData(true, 12)]
+        public void IsAMultipleOf3Or7(bool expected, int n)
+        {
+            Assert.Equal(expected, CodingChallenges.IsAMultipleOf3Or7(n));
         }
     }
 }

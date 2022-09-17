@@ -39,5 +39,8 @@ namespace CodingChallenges
 
             return input[0..index] + input[(index + 1)..];
         }
+
+        //Write a C# Sharp program to check if a given positive number is a multiple of 3 or a multiple of 7
+        public static bool IsAMultipleOf3Or7(int n) => n > 0 && (n % 3 == 0 || n % 7 == 0);
     }
 }
